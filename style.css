@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap");
+/* font-family: "Nunito", sans-serif; */
+/* font-weight: 200-1000 */
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+}
+a,
+button {
+  cursor: pointer;
+  text-decoration: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  background: none;
+  outline: none;
+  border: none;
+}
+fieldset {
+  border: none;
+}
+ul {
+  list-style: none;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* ------------------------------ */
+.container {
+}
+.section__heading {
+  font-size: 12rem;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.5rem;
+  text-shadow: 0.3rem 0.3rem 0.3rem #000;
+}
+/*------------ Section 1 ----------- */
+.section-1 {
+  width: 100%;
+  height: 100vh;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.section-1__icons {
+}
+.section-1__icons i {
+  font-size: 25rem;
+  color: #a79a2d;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-shadow: 0.2rem 0.2rem 0.2rem #000;
+  transform: scale(0);
+  transition: transform 0.3s;
+}
+.section-1__icons i.change {
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.3s;
+}
+
+/*------------ Section 2 ----------- */
+.section-2 {
+  width: 100%;
+  height: 100vh;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5rem 0;
+}
+.section-2__heading {
+}
+.section-2__cards--container {
+  display: flex;
+  justify-content: space-evenly;
+  /* flex-wrap: wrap; */
+}
+.card {
+  width: 30rem;
+  background-color: #a79a2d;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: 1rem 1rem 3rem #000;
+  transform: skew(-2deg);
+
+  position: relative;
+  transition: all 0.5s;
+}
+.card:hover {
+  transform: translateY(-2rem) skew(-2deg);
+  box-shadow: 2rem 2rem 3rem #000;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: -0.4rem;
+  left: -1rem;
+  width: 1rem;
+  height: 100%;
+  background-color: #817824;
+  transform: skewY(45deg);
+}
+.card::after {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  width: 100%;
+  height: 1rem;
+  background-color: #817824;
+  /* transform: skewY(45deg); */
+}
+.card__img {
+}
+.card__name {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: #111;
+  text-shadow: 0.15rem 0.15rem 0.15rem #000;
+}
+.card__btn {
+  width: 70%;
+  background-color: #111;
+  color: #888;
+  border-radius: 5rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  text-transform: capitalize;
+  padding: 0.5rem 0;
+  box-shadow: -0.2rem -0.2rem 0.2rem #000;
+  transition: all 0.3s;
+}
+.card__btn:hover {
+  color: #a79a2d;
+}
+
+/*------------ Section 3 ----------- */
+.section-3 {
+  background-color: #333;
+  padding: 5rem 0;
+}
+.section__heading {
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  row-gap: 2rem;
+  margin-top: 10rem;
+}
+.gallery__link {
+  position: relative;
+  margin: 1rem;
+}
+.gallery__link::before {
+  content: "";
+  position: absolute;
+  top: 2vw;
+  left: 80%;
+  width: 0.2rem;
+  height: 80%;
+  background-color: #fff;
+  transform: scale(0);
+  z-index: 5;
+}
+.gallery__link::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 2rem;
+  width: 80%;
+  height: 0.2rem;
+  background-color: #fff;
+  transform: scale(0);
+  z-index: 5;
+}
+.gallery__link--img {
+  width: 24vw;
+  height: 30vh;
+  box-shadow: 0.3rem 0.3rem 0.1rem #e92929;
+}
+.food__name {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  transform: scale(0);
+}
+.food__text {
+  position: absolute;
+  bottom: 3rem;
+  left: 2rem;
+  width: 70%;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #fff;
+  transform: scale(0);
+}
+.gallery__link:hover::before,
+.gallery__link:hover::after {
+  transform: scale(1);
+  transition: all 0.5s;
+}
+.gallery__link:hover .food__name,
+.gallery__link:hover .food__text {
+  transform: scale(1);
+  transition: all 1s ease-out;
+}
+.gallery__link:hover .gallery__link--img {
+  transition: all 0.3s;
+  filter: brightness(0.4);
+  transform: scale(1.05);
+  box-shadow: 0.5rem 0.5rem 0.1rem #e92929;
+}
+/*------------ Section ----------- */
