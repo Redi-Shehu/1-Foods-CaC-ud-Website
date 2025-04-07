@@ -1,3 +1,13 @@
+// navbar clicking menu
+const navbar = document.querySelector(".navbar");
+const menu = document.querySelector(".menu");
+
+menu.addEventListener("click", () => {
+  navbar.classList.toggle("change");
+  menu.classList.toggle("change");
+});
+
+// icons show on interval
 const icons = document.querySelectorAll(".section-1__icons i");
 let currentIndex = 0;
 // console.log(icons);
